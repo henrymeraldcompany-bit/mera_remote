@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MERA - Remote Device Management | Official Portal</title>
+  <meta name="description" content="MERA is an enterprise-grade, transparent, and consent-first remote device management system for Android and Windows devices.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Dynamic configuration layer -->
+  <script src="js/config.js"></script>
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="navbar" role="banner">
+    <div class="container nav-container">
+      <a href="#" class="logo-wrap" aria-label="MERA Home">
+        <img src="assets/icons/logo.svg" alt="MERA Logo" class="logo-icon" width="36" height="36">
+        <div class="logo-text-group">
+          <span class="logo-brand">MERA</span>
+          <span class="logo-tagline">Remote Device Management</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" role="navigation" aria-label="Primary Navigation">
+        <a href="#what-is-mera" class="nav-link">What is MERA?</a>
+        <a href="#supported-devices" class="nav-link">Supported Devices</a>
+        <a href="#how-pairing-works" class="nav-link">How Pairing Works</a>
+        <a href="#security" class="nav-link">Security</a>
+        <a href="#download" class="nav-link">Downloads</a>
+        <a href="#installation" class="nav-link">Installation</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#contact" class="nav-link">Support</a>
+      </nav>
+
+      <div class="nav-cta-group">
+        <a href="#download" class="btn btn-primary" style="padding: 10px 18px; font-size: 0.85rem;">Get Agents</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-pill-badge">
+          <span></span> Enterprise Fleet Control • Zero-Stealth Architecture
+        </div>
+
+        <h1 id="hero-heading" class="hero-title">
+          <span class="gradient-text">MERA</span><br>
+          Remote Device Management
+        </h1>
+
+        <p class="hero-subtitle">
+          A secure, enterprise-grade fleet administration and remote support platform for Android and Windows devices. Built from the ground up on verifiable physical owner consent, cryptographic access controls, and transparent real-time telemetry.
+        </p>
+
+        <!-- Primary Action Download Buttons (Configured dynamically via js/config.js) -->
+        <div class="hero-cta-row">
+          <a id="btn-download-android" href="downloads/mera-android-agent.apk" class="btn btn-primary" download="mera-android-agent.apk">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.414 13.8533 8.0818 12 8.0818s-3.5902.3322-5.1367.8679L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
+            </svg>
+            DOWNLOAD ANDROID AGENT
+          </a>
+
+          <a id="btn-download-windows" href="downloads/mera-windows-agent.exe" class="btn btn-secondary" download="mera-windows-agent.exe">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+            </svg>
+            DOWNLOAD WINDOWS AGENT
+          </a>
+        </div>
+
+        <!-- Quick Principles Strip -->
+        <div class="principles-strip">
+          <div class="principle-tag"><span class="check">✓</span> 100% Authorized &amp; Non-Covert</div>
+          <div class="principle-tag"><span class="check">✓</span> 6-Digit Double Consent Pairing</div>
+          <div class="principle-tag"><span class="check">✓</span> Ongoing System Notification &amp; Chime</div>
+          <div class="principle-tag"><span class="check">✓</span> Instant One-Tap Kill Switch</div>
+          <div class="principle-tag"><span class="check">✓</span> Immutable Tamper-Evident Audit Trail</div>
+        </div>
+
+        <!-- System Architecture Graphic Preview -->
+        <div style="margin-top: 50px; text-align: center;">
+          <img src="assets/images/architecture.svg" alt="MERA End-to-End Enterprise Architecture" style="max-width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: 0 20px 50px rgba(0,0,0,0.6);" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: What is MERA? -->
+    <section id="what-is-mera" class="section" aria-labelledby="what-heading">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-eyebrow">Enterprise Core</div>
+          <h2 id="what-heading" class="section-title">What is MERA?</h2>
+          <p class="section-desc">
+            MERA (Managed Endpoint Remote Administration) is a unified fleet management system designed for organizational IT teams, field engineers, and system administrators who require authorized control without compromising user trust or security standards.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="cyber-card">
+            <div class="card-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#00F0FF" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="card-title">Consent-First Remote Sessions</h3>
+            <p class="card-desc">
+              Every remote session strictly requires mutual agreement: the administrator initiates the request, and the device owner physically accepts a system prompt showing the administrator's identity and stated purpose.
+            </p>
+          </div>
+
+          <div class="cyber-card">
+            <div class="card-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3 class="card-title">Transparent Telemetry</h3>
+            <p class="card-desc">
+              Real-time monitoring of legitimate non-invasive metrics: CPU utilization, available RAM, battery health, storage capacity, operating system build, and network connection state without probing private user data.
+            </p>
+          </div>
+
+          <div class="cyber-card">
+            <div class="card-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <h3 class="card-title">Instant Device Kill Switch</h3>
+            <p class="card-desc">
+              Computer and mobile device owners remain in permanent control. A single tap or hotkey immediately drops the management session, purges transient tokens, and logs the termination to the central audit log.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Supported Devices -->
+    <section id="supported-devices" class="section" aria-labelledby="devices-heading">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-eyebrow">Fleet Compatibility</div>
+          <h2 id="devices-heading" class="section-title">Supported Devices &amp; Operating Systems</h2>
+          <p class="section-desc">
+            Engineered natively for modern enterprise and field hardware with lightweight, battery-efficient agents.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <!-- Android Card -->
+          <div class="device-card android">
+            <div>
+              <span class="device-badge badge-android">MOBILE &amp; TABLET FLEET</span>
+              <h3 style="font-size: 1.5rem; margin-bottom: 8px;">MERA Android Agent</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem;">
+                Compatible with smartphones, rugged field tablets, and kiosks running modern Android.
+              </p>
+              <ul class="device-feature-list">
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Android 8.0 (Oreo / API 26) through Android 15 &amp; 16</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Mandatory Foreground Service with high-priority status notification</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Legitimate Android MediaProjection consent for remote display</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Hardware-backed Android Keystore encrypted credential storage</li>
+              </ul>
+            </div>
+            <a href="downloads/mera-android-agent.apk" class="btn btn-secondary" style="border-color: var(--border-green); color: var(--neon-green);" download="mera-android-agent.apk">
+              Download Android Agent (.apk)
+            </a>
+          </div>
+
+          <!-- Windows Card -->
+          <div class="device-card windows">
+            <div>
+              <span class="device-badge badge-windows">WORKSTATION &amp; LAPTOP FLEET</span>
+              <h3 style="font-size: 1.5rem; margin-bottom: 8px;">MERA Windows Agent</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem;">
+                Compatible with enterprise laptops, workstations, and Windows virtual desktop infrastructure.
+              </p>
+              <ul class="device-feature-list">
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Windows 10 &amp; Windows 11 (64-bit architecture)</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Transparent Service Installer using standard Windows Service Control Manager</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Audible alert chime and high-visibility red banner during active sessions</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Physical [K] instant kill switch hotkey available in interactive dashboard</li>
+              </ul>
+            </div>
+            <a href="downloads/mera-windows-agent.exe" class="btn btn-secondary" style="border-color: var(--border-cyan); color: var(--neon-cyan);" download="mera-windows-agent.exe">
+              Download Windows Agent (.exe)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: How Pairing Works -->
+    <section id="how-pairing-works" class="section" aria-labelledby="pairing-heading">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-eyebrow">Zero-Trust Enrollment</div>
+          <h2 id="pairing-heading" class="section-title">How Pairing Works: Step-by-Step</h2>
+          <p class="section-desc">
+            No devices are ever pre-configured with hardcoded secrets or backdoors. Enrollment requires physical cooperation between device owner and administrator.
+          </p>
+        </div>
+
+        <div class="pipeline-grid">
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <h3 class="step-title">Agent Launch</h3>
+            <p class="step-desc">The device owner launches the MERA Agent. The agent connects to the control plane and requests a dynamic, cryptographically random 6-digit OTP pairing code.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <h3 class="step-title">Admin Claims Code</h3>
+            <p class="step-desc">The administrator enters the 6-digit code into the MERA Admin application and assigns a friendly device name (e.g. "Executive Laptop").</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <h3 class="step-title">Owner Confirmation</h3>
+            <p class="step-desc">The device agent receives the claim and prompts the device owner: "Authorize Alice (Admin) to manage this device?" Owner taps Confirm.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">04</div>
+            <h3 class="step-title">Mutual Enrollment</h3>
+            <p class="step-desc">Unique device identity tokens (`agt_sec_...`) are issued and encrypted in hardware storage. Live presence status updates to ONLINE.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Security & Compliance -->
+    <section id="security" class="section" aria-labelledby="security-heading">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-eyebrow">Enterprise Safeguards</div>
+          <h2 id="security-heading" class="section-title">Security by Architecture &amp; Design</h2>
+          <p class="section-desc">
+            MERA strictly rejects malicious and covert surveillance paradigms. Built to pass enterprise infosec reviews and endpoint security scrutiny.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="cyber-card">
+            <h3 class="card-title" style="color: var(--neon-cyan);">5-Point Verification Guard</h3>
+            <p class="card-desc">
+              Every remote connection rigorously verifies: (1) Authenticated Administrator, (2) Enrolled Device, (3) Valid Device Credentials, (4) Active Real-Time Socket, and (5) Single-Use Cryptographic Session Token.
+            </p>
+          </div>
+
+          <div class="cyber-card">
+            <h3 class="card-title" style="color: var(--neon-green);">Zero Stealth Policy</h3>
+            <p class="card-desc">
+              No covert background screen capture, no keylogging, no credential harvesting, and no security software evasion. The device owner can always see when an agent is running and when an administrator is connected.
+            </p>
+          </div>
+
+          <div class="cyber-card">
+            <h3 class="card-title" style="color: var(--neon-purple);">Connection Recovery Grace</h3>
+            <p class="card-desc">
+              Network interruptions trigger an automatic 30-second recovery grace timer. Reconnections within 30s verify the cryptographic session token to restore sessions seamlessly without exposing tokens.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Downloads & Package Distribution -->
+    <section id="download" class="section" aria-labelledby="downloads-heading">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-eyebrow">Software Distribution</div>
+          <h2 id="downloads-heading" class="section-title">Download Official MERA Packages</h2>
+          <p class="section-desc">
+            Production builds for Android mobile devices, Windows workstations, and the MERA Administrator controller.
+          </p>
+          <div style="margin-top: 12px;">
+            <span id="release-version-badge" class="hero-pill-badge" style="margin-bottom: 0;">v1.0.0 Stable Release</span>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <!-- Card 1: Android Agent -->
+          <div class="cyber-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div class="card-icon-wrap" style="background: rgba(16, 185, 129, 0.1); border-color: var(--border-green);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              </div>
+              <h3 class="card-title">MERA Android Agent</h3>
+              <p class="card-desc">Install on Android smartphones and tablets to enable authorized fleet management and remote diagnostics.</p>
+              <div style="margin: 20px 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim);">
+                Package: <code>mera-android-agent.apk</code><br>
+                Target: Android 8.0 - 15+ (Universal)
+              </div>
+            </div>
+            <a href="downloads/mera-android-agent.apk" class="btn btn-primary" download="mera-android-agent.apk">
+              [ DOWNLOAD ANDROID AGENT ]
+            </a>
+          </div>
+
+          <!-- Card 2: Windows Agent -->
+          <div class="cyber-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div class="card-icon-wrap" style="background: rgba(0, 240, 255, 0.1); border-color: var(--border-cyan);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#00F0FF" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <h3 class="card-title">MERA Windows Agent</h3>
+              <p class="card-desc">Install on Windows laptops and workstations for remote inventory tracking and authorized remote sessions.</p>
+              <div style="margin: 20px 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim);">
+                Package: <code>mera-windows-agent.exe</code><br>
+                Target: Windows 10 &amp; 11 (x64)
+              </div>
+            </div>
+            <a href="downloads/mera-windows-agent.exe" class="btn btn-secondary" download="mera-windows-agent.exe">
+              [ DOWNLOAD WINDOWS AGENT ]
+            </a>
+          </div>
+
+          <!-- Card 3: Admin Android App -->
+          <div class="cyber-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div class="card-icon-wrap" style="background: rgba(168, 85, 247, 0.1); border-color: rgba(168, 85, 247, 0.4);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              <h3 class="card-title">MERA Admin Controller</h3>
+              <p class="card-desc">Install on the administrator's Android device to view fleet inventory, pair devices, and manage remote sessions.</p>
+              <div style="margin: 20px 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim);">
+                Package: <code>mera-admin.apk</code><br>
+                Target: Administrator Mobile Hub
+              </div>
+            </div>
+            <a id="btn-download-admin" href="downloads/mera-admin.apk" class="btn btn-outline" download="mera-admin.apk">
+              [ DOWNLOAD ADMIN APP ]
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: Separate Installation Instructions -->
+    <section id="installation" class="section" aria-labelledby="install-heading">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-eyebrow">Deployment Manual</div>
+          <h2 id="install-heading" class="section-title">Installation Instructions</h2>
+          <p class="section-desc">Select your target platform below for detailed, step-by-step installation guides.</p>
+        </div>
+
+        <!-- Tab Selector Buttons -->
+        <div class="tabs-header" role="tablist">
+          <button class="tab-nav-btn active" data-target="tab-android" role="tab" aria-selected="true" aria-controls="tab-android">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.414 13.8533 8.0818 12 8.0818s-3.5902.3322-5.1367.8679L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/></svg>
+            Android Installation Guide
+          </button>
+          <button class="tab-nav-btn" data-target="tab-windows" role="tab" aria-selected="false" aria-controls="tab-windows">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+            Windows Installation Guide
+          </button>
+        </div>
+
+        <!-- Android Instructions Tab Pane -->
+        <div id="tab-android" class="install-tab-pane active" role="tabpanel">
+          <div class="instruction-box">
+            <div class="instruction-step">
+              <span class="step-badge">STEP 1</span>
+              <h4>Download the APK Package</h4>
+              <p>Download <code>mera-android-agent.apk</code> directly to the target Android phone or tablet using the download button above.</p>
+            </div>
+
+            <div class="instruction-step">
+              <span class="step-badge">STEP 2</span>
+              <h4>Enable "Install Unknown Apps" Permission</h4>
+              <p>When opening the APK, Android will ask for authorization to install from your browser or file manager:</p>
+              <div class="code-snippet">
+                <span id="cmd-android-perm">Settings &gt; Security &gt; Install unknown apps &gt; Allow from this source</span>
+                <button class="copy-trigger" data-copy-target="cmd-android-perm">Copy</button>
+              </div>
+            </div>
+
+            <div class="instruction-step">
+              <span class="step-badge">STEP 3</span>
+              <h4>Launch MERA Agent &amp; Grant Notifications</h4>
+              <p>Launch the installed application. When prompted, grant notification permissions. MERA uses an ongoing notification to ensure the device owner always knows when the service is active.</p>
+            </div>
+
+            <div class="instruction-step">
+              <span class="step-badge">STEP 4</span>
+              <h4>Pair with Administrator</h4>
+              <p>The screen displays a 6-digit OTP code (e.g. <code>582-914</code>) valid for 5 minutes. Provide this code to your IT administrator. Once claimed, tap <strong>Authorize Device Enrollment</strong> on the prompt.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Windows Instructions Tab Pane -->
+        <div id="tab-windows" class="install-tab-pane" role="tabpanel">
+          <div class="instruction-box">
+            <div class="instruction-step">
+              <span class="step-badge">STEP 1</span>
+              <h4>Download the Windows Agent Installer</h4>
+              <p>Download <code>mera-windows-agent.exe</code> onto the target Windows 10 or 11 laptop or desktop.</p>
+            </div>
+
+            <div class="instruction-step">
+              <span class="step-badge">STEP 2</span>
+              <h4>Windows Defender SmartScreen Notice</h4>
+              <p>Because the agent is an enterprise binary distributed internally, Windows SmartScreen may show an unrecognized app prompt. Click <strong>More info</strong> and then <strong>Run anyway</strong>.</p>
+            </div>
+
+            <div class="instruction-step">
+              <span class="step-badge">STEP 3</span>
+              <h4>Install as Windows Background Service (Optional)</h4>
+              <p>To ensure persistent connection across reboots, open an elevated PowerShell prompt and run:</p>
+              <div class="code-snippet">
+                <span id="cmd-win-svc">MERA-Agent-Setup.bat --install-service</span>
+                <button class="copy-trigger" data-copy-target="cmd-win-svc">Copy</button>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 6px;">The service installs legitimately as <code>MeraRemoteAgent</code> in Windows Services (services.msc).</p>
+            </div>
+
+            <div class="instruction-step">
+              <span class="step-badge">STEP 4</span>
+              <h4>Pairing &amp; Interactive Kill Switch</h4>
+              <p>The terminal or tray dashboard displays your pairing code. After the administrator claims it, press <strong>[C]</strong> to confirm. During active sessions, press <strong>[K]</strong> or tap the red tray button to instantly terminate the session.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: FAQ (Accordion) -->
+    <section id="faq" class="section" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-eyebrow">Frequently Asked Questions</div>
+          <h2 id="faq-heading" class="section-title">Transparency &amp; Technical FAQ</h2>
+          <p class="section-desc">Clear, honest answers about MERA's capabilities, security boundaries, and consent model.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Is MERA a hidden spy tool or Remote Access Trojan (RAT)?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p><strong>Absolutely not.</strong> MERA is an authorized enterprise device management platform. It does not contain any stealth mechanisms, keyloggers, credential harvest routines, or anti-antivirus evasion techniques. When MERA is active, the device displays a high-visibility notification on Android or a visible tray/console presence on Windows.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Can an administrator start a remote session without my knowledge?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>No. Remote sessions require physical consent from the computer or phone owner. When an administrator requests a session, a modal dialog appears displaying their name and stated purpose. The session only begins once you tap Authorize or press confirm.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How does the instant Kill Switch work?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Both parties have an immediate kill switch. On Android, the persistent notification includes a "Stop Session" action button. On Windows, pressing <code>[k]</code> or clicking the red tray icon immediately terminates the socket, invalidates the session token, and notifies the control plane.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What telemetry information is collected?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>MERA collects strictly operational hardware metrics: CPU load, RAM usage, storage space, battery level, OS version, device hostname, and network status. Personal browsing history, private files, passwords, and keystrokes are never monitored or recorded.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How can I deploy this website independently?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>This website exists entirely inside the <code>website/</code> folder with zero server-side compilation requirements. You can upload or deploy just the <code>website/</code> directory to GitHub Pages, Cloudflare Pages, Netlify, Vercel, or any standard Apache/Nginx web host.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: Contact / Support Placeholder -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-eyebrow">Enterprise Support</div>
+          <h2 id="contact-heading" class="section-title">Contact &amp; Assistance</h2>
+          <p class="section-desc">Have questions regarding enterprise enrollment, custom policies, or security audits?</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3 style="font-size: 1.3rem; margin-bottom: 12px;">Get in Touch</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">
+              Our security and engineering team is available for fleet deployment guidance and technical inquiries.
+            </p>
+
+            <div style="margin-bottom: 16px;">
+              <span style="display: block; font-family: var(--font-mono); font-size: 0.8rem; color: var(--neon-cyan);">TECHNICAL SUPPORT</span>
+              <a href="mailto:support@mera.io" style="color: #FFFFFF; text-decoration: none; font-weight: 600;">support@mera.io</a>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+              <span style="display: block; font-family: var(--font-mono); font-size: 0.8rem; color: var(--neon-cyan);">SECURITY &amp; DISCLOSURE</span>
+              <a href="mailto:security@mera.io" style="color: #FFFFFF; text-decoration: none; font-weight: 600;">security@mera.io</a>
+            </div>
+
+            <div>
+              <span style="display: block; font-family: var(--font-mono); font-size: 0.8rem; color: var(--neon-cyan);">DOCUMENTATION REPOSITORY</span>
+              <span style="color: var(--text-muted);">See <code>/docs</code> directory in repository</span>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Your Name</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex Walker" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="alex@enterprise.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message / Inquiry</label>
+                <textarea id="contact-message" class="form-textarea" rows="4" placeholder="How can we assist with your device fleet?" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
+              <div id="contact-feedback" class="contact-feedback" role="alert"></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- System Status Bar -->
+        <div class="status-bar-container">
+          <div class="status-indicator-wrap" id="system-status-indicator">
+            <div id="health-dot" class="status-dot standby"></div>
+            <span id="health-status-text">Static Gateway Active • Control Plane Ready</span>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-dim);">
+            Gateway Latency: <span id="latency-val" style="color: var(--neon-cyan);">Local Standby</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="font-family: var(--font-mono); font-weight: 800; font-size: 1.2rem; color: #FFFFFF; margin-bottom: 8px;">MERA</div>
+          <p style="max-width: 280px; font-size: 0.85rem; color: var(--text-muted);">
+            Transparent, consent-first remote device management and fleet administration for Android and Windows.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Downloads</h5>
+          <ul>
+            <li><a href="downloads/mera-android-agent.apk">Android Agent (.apk)</a></li>
+            <li><a href="downloads/mera-windows-agent.exe">Windows Agent (.exe)</a></li>
+            <li><a href="downloads/mera-admin.apk">Admin Controller (.apk)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul>
+            <li><a href="#what-is-mera">What is MERA?</a></li>
+            <li><a href="#supported-devices">Supported Devices</a></li>
+            <li><a href="#how-pairing-works">Pairing Manual</a></li>
+            <li><a href="#security">Security Model</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Compliance</h5>
+          <ul>
+            <li><a href="#security">Zero-Stealth Guarantee</a></li>
+            <li><a href="#faq">Privacy &amp; Data FAQ</a></li>
+            <li><a href="#contact">Security Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 MERA Remote Management. All rights reserved.</div>
+        <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-dim);">Static Distribution Package • Completely Independent</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
