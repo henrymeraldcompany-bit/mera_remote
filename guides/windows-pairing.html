@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windows Pairing Guide - MERA Remote Management</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="../index.html" style="display:flex;align-items:center;gap:10px;">
+          <span class="logo-badge">MERA</span>
+          <span class="logo-title">Remote Management</span>
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="../index.html#downloads">Downloads</a>
+        <a href="../index.html#pairing-guide">Guides</a>
+        <a href="../index.html#security">Security</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="section-container" style="max-width: 800px;">
+      <h1 style="font-size: 36px; margin-bottom: 16px;">Windows Laptop Enrollment Guide</h1>
+      <p style="color: var(--text-secondary); margin-bottom: 32px;">Learn how to install and enroll a Windows 10 or 11 laptop into the MERA Remote Management ecosystem.</p>
+
+      <div class="steps-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h4>Extract the Windows Bundle</h4>
+            <p>Download <code>mera-windows-agent.zip</code> from the <a href="../index.html#downloads">Download Center</a>. Right-click and extract the zip archive to your local drive (e.g. <code>C:\Program Files\MERA Agent\</code>).</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h4>Initiate Enrollment</h4>
+            <p>Launch the interactive enrollment CLI or desktop app: run <code>npm run pair</code> or execute <code>MeraPairing.exe</code>. The agent inspects hardware parameters and contacts the backend.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h4>View Pairing OTP</h4>
+            <p>A pairing window opens with a 6-digit OTP code (e.g. <code>829-104</code>) valid for 300 seconds.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h4>Admin Claims from Phone</h4>
+            <p>The administrator enters <code>829-104</code> in the MERA Admin mobile app and assigns a friendly name (e.g., "Engineering Laptop - Sarah").</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <h4>Approve on Windows</h4>
+            <p>The Windows dialog updates: <em>"Administrator 'John Doe' wants to manage this computer. Approve?"</em> Click <strong>"Approve Enrollment"</strong>.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">6</div>
+          <div class="step-body">
+            <h4>Background Operation with Tray Controls</h4>
+            <p>The agent is now active in the Windows Notification Area (System Tray). Right-click the MERA icon anytime to check connection health or click <strong>"Disconnect Now"</strong> to sever remote access.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 40px; text-align: center;">
+        <a href="../index.html" class="btn btn-primary">Back to Home</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Android Pairing Guide - MERA Remote Management</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="../index.html" style="display:flex;align-items:center;gap:10px;">
+          <span class="logo-badge">MERA</span>
+          <span class="logo-title">Remote Management</span>
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="../index.html#downloads">Downloads</a>
+        <a href="../index.html#pairing-guide">Guides</a>
+        <a href="../index.html#security">Security</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="section-container" style="max-width: 800px;">
+      <h1 style="font-size: 36px; margin-bottom: 16px;">Android Device Enrollment Guide</h1>
+      <p style="color: var(--text-secondary); margin-bottom: 32px;">This comprehensive guide walks you through installing and pairing an Android smartphone or tablet with your MERA Administrator console.</p>
+
+      <div class="steps-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h4>Install the MERA Agent APK</h4>
+            <p>Download <code>mera-agent.apk</code> from the <a href="../index.html#downloads">Download Center</a> onto your Android device. Once downloaded, tap the notification or open your Downloads folder and tap the APK to install. If prompted, toggle "Allow from this source" in your Android Settings.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h4>Launch & Review Permissions</h4>
+            <p>Open <strong>MERA Agent</strong>. You will be greeted by the transparency overview explaining that MERA operates an ongoing Foreground Service with persistent notifications. Tap <strong>"Begin Enrollment"</strong>.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h4>Generate One-Time Pairing Code</h4>
+            <p>The screen generates a unique 6-digit pairing code (e.g. <code>482-195</code>) and an animated QR code. The code is active for 5 minutes and single-use.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h4>Administrator Scans / Claims</h4>
+            <p>On your administrator device, launch <strong>MERA Admin</strong>, navigate to "Add Device", and scan the QR code or type the 6-digit OTP code.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <h4>Owner Grants Final Confirmation</h4>
+            <p>The Android agent displays an interactive modal showing the Administrator's name and requesting authorization. Tap <strong>"Authorize & Enroll"</strong>. Enrollment is complete and credentials are saved to the secure keystore.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">6</div>
+          <div class="step-body">
+            <h4>Ongoing Status & Session Disconnect</h4>
+            <p>A non-dismissible notification remains in your status bar: <em>"MERA Agent Active"</em>. During any active remote session, a prominent <strong>"Stop Session"</strong> button allows you to sever the connection instantly.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 40px; text-align: center;">
+        <a href="../index.html" class="btn btn-primary">Back to Home</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
