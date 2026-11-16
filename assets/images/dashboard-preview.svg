@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="100%" height="100%" fill="none">
+  <!-- Window Frame -->
+  <rect width="720" height="400" rx="12" fill="#070B14" stroke="#1E293B" stroke-width="2"/>
+  <!-- Top Bar -->
+  <path d="M 0 12 C 0 5.37 5.37 0 12 0 H 708 C 714.63 0 720 5.37 720 12 V 40 H 0 Z" fill="#0F172A"/>
+  <circle cx="24" cy="20" r="5" fill="#EF4444"/>
+  <circle cx="40" cy="20" r="5" fill="#F59E0B"/>
+  <circle cx="56" cy="20" r="5" fill="#10B981"/>
+  <text x="360" y="25" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">mera-admin-portal://v1.0.0/fleet-terminal</text>
+
+  <!-- Metric Badges -->
+  <g transform="translate(30, 60)">
+    <rect width="150" height="70" rx="8" fill="#0D1526" stroke="#1E293B"/>
+    <text x="16" y="24" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="11">TOTAL DEVICES</text>
+    <text x="16" y="54" fill="#F8FAFC" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="bold">128</text>
+  </g>
+
+  <g transform="translate(195, 60)">
+    <rect width="150" height="70" rx="8" fill="#0D1526" stroke="#10B981" stroke-opacity="0.4"/>
+    <text x="16" y="24" fill="#10B981" font-family="'Inter', sans-serif" font-size="11">ONLINE PRESENCE</text>
+    <text x="16" y="54" fill="#10B981" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="bold">116</text>
+  </g>
+
+  <g transform="translate(360, 60)">
+    <rect width="150" height="70" rx="8" fill="#0D1526" stroke="#00F0FF" stroke-opacity="0.4"/>
+    <text x="16" y="24" fill="#00F0FF" font-family="'Inter', sans-serif" font-size="11">ACTIVE SESSIONS</text>
+    <text x="16" y="54" fill="#00F0FF" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="bold">4</text>
+  </g>
+
+  <g transform="translate(525, 60)">
+    <rect width="165" height="70" rx="8" fill="#0D1526" stroke="#A855F7" stroke-opacity="0.4"/>
+    <text x="16" y="24" fill="#A855F7" font-family="'Inter', sans-serif" font-size="11">SECURITY AUDIT</text>
+    <text x="16" y="54" fill="#A855F7" font-family="'JetBrains Mono', monospace" font-size="18" font-weight="bold">100% VERIFIED</text>
+  </g>
+
+  <!-- Live Table / Device Cards -->
+  <g transform="translate(30, 150)">
+    <rect width="660" height="220" rx="8" fill="#090E1A" stroke="#1E293B"/>
+    <!-- Table Header -->
+    <rect width="660" height="34" rx="8" fill="#0F172A"/>
+    <text x="20" y="22" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="11">DEVICE IDENTIFIER</text>
+    <text x="220" y="22" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="11">PLATFORM</text>
+    <text x="340" y="22" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="11">STATUS</text>
+    <text x="460" y="22" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="11">TELEMETRY</text>
+    <text x="580" y="22" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="11">ACTION</text>
+
+    <!-- Row 1 -->
+    <text x="20" y="66" fill="#F8FAFC" font-family="'Inter', sans-serif" font-size="12" font-weight="500">Executive Windows Laptop</text>
+    <text x="220" y="66" fill="#00F0FF" font-family="'JetBrains Mono', monospace" font-size="11">Windows 11 Pro</text>
+    <circle cx="346" cy="62" r="4" fill="#10B981"/>
+    <text x="358" y="66" fill="#10B981" font-family="'JetBrains Mono', monospace" font-size="11">ONLINE</text>
+    <text x="460" y="66" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="11">CPU: 18% | RAM: 42%</text>
+    <rect x="580" y="50" width="60" height="24" rx="4" fill="#00F0FF" fill-opacity="0.15" stroke="#00F0FF" stroke-width="0.8"/>
+    <text x="610" y="66" fill="#00F0FF" font-family="'Inter', sans-serif" font-size="11" text-anchor="middle">Session</text>
+
+    <!-- Row 2 -->
+    <line x1="20" y1="88" x2="640" y2="88" stroke="#1E293B" stroke-width="0.5"/>
+    <text x="20" y="116" fill="#F8FAFC" font-family="'Inter', sans-serif" font-size="12" font-weight="500">Field Tablet Alpha-09</text>
+    <text x="220" y="116" fill="#10B981" font-family="'JetBrains Mono', monospace" font-size="11">Android 15</text>
+    <circle cx="346" cy="112" r="4" fill="#00F0FF"/>
+    <text x="358" y="116" fill="#00F0FF" font-family="'JetBrains Mono', monospace" font-size="11">ACTIVE</text>
+    <text x="460" y="116" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="11">BAT: 88% | 5G NR</text>
+    <rect x="580" y="100" width="60" height="24" rx="4" fill="#EF4444" fill-opacity="0.15" stroke="#EF4444" stroke-width="0.8"/>
+    <text x="610" y="116" fill="#EF4444" font-family="'Inter', sans-serif" font-size="11" text-anchor="middle">End</text>
+
+    <!-- Row 3 -->
+    <line x1="20" y1="138" x2="640" y2="138" stroke="#1E293B" stroke-width="0.5"/>
+    <text x="20" y="166" fill="#F8FAFC" font-family="'Inter', sans-serif" font-size="12" font-weight="500">Operations Workstation 04</text>
+    <text x="220" y="166" fill="#00F0FF" font-family="'JetBrains Mono', monospace" font-size="11">Windows 11 Ent</text>
+    <circle cx="346" cy="162" r="4" fill="#10B981"/>
+    <text x="358" y="166" fill="#10B981" font-family="'JetBrains Mono', monospace" font-size="11">ONLINE</text>
+    <text x="460" y="166" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="11">CPU: 4% | RAM: 28%</text>
+    <rect x="580" y="150" width="60" height="24" rx="4" fill="#00F0FF" fill-opacity="0.15" stroke="#00F0FF" stroke-width="0.8"/>
+    <text x="610" y="166" fill="#00F0FF" font-family="'Inter', sans-serif" font-size="11" text-anchor="middle">Session</text>
+  </g>
+</svg>
